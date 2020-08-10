@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  // $(window).on("scroll", function () {
+  //   $("#navigation").addClass("sticky");
+  // });
+
+  // window.addEventListener ("scroll", function () {
+  //   $("nav").classList.toggle("sticky", window.scrollY > 0)
+  // })
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 580) {
+      $("#navigation").addClass("sticky");
+    } else {
+      $("#navigation").removeClass("sticky");
+    }
+  });
+
+
   // Smooth Scroll
   $("a").on("click", function (event) {
     if (this.hash !== "") {

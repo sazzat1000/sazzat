@@ -124,14 +124,15 @@ input:focus,
   box-shadow: none;
 }
 
-/* ============== Nav Start ============== */
+/* ============== Header Start ============== */
+header {
+  height: 110vh;
+}
 #navigation {
-  background: #317bd6;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
+  background: transparent;
+  padding: 0;
+  z-index: 10;
+  transition: .7s;
 }
 #navigation .navbar-brand {
   font-size: 20px;
@@ -155,16 +156,17 @@ input:focus,
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-/* ============== Nav End ============== */
-
-/* ============== Banner Start ============== */
 #banner {
   background: url(img/banner/2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 180px 0 150px;
+  height: 100%;
   position: relative;
-  margin-top: 86px;
+  margin-top: -80px;
+}
+#banner .container,
+#banner .row {
+  height: 100%;
 }
 #banner::before {
   content: "";
@@ -197,6 +199,12 @@ input:focus,
   letter-spacing: 10px;
   font-weight: 900;
 }
+.banner-content .i-am {
+  color: #fff;
+  text-transform: none;
+  font-size: 50px;
+
+}
 .banner-content h3 {
   font-size: 30px;
   font-weight: 400;
@@ -206,12 +214,20 @@ input:focus,
 .banner-content .btn-blue {
   margin-right: 15px;
 }
-/* ============== Banner End ============== */
+.sticky {
+  background: #317bd6 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+/* ============== Header End ============== */
 
 /* ============== Feature Start ============== */
 #feature {
   text-align: center;
-  margin-top: -80px;
+  margin-top: -100px;
 }
 .feature-item {
   padding: 40px 25px;
